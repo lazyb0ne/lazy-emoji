@@ -2,14 +2,14 @@
 lock "~> 3.11.0"
 
 set :rvm_ruby_version, '2.3.1'
-set :application, "lazyclub"
-set :repo_url, "git@github.com:lazyb0ne/lazyclub.git"
+set :application, "lazy-emoji"
+set :repo_url, "git@github.com:lazyb0ne/lazy-emoji.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/www/lazyclub"
+set :deploy_to, "/home/www/lazy-emoji"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
