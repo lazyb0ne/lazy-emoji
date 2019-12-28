@@ -1,12 +1,11 @@
 default: &default
-  # adapter: postgresql
-  adapter: mysql2
-  encoding: utf8mb4
+  adapter: postgresql
+  # adapter: mysql2
   pool: 20
-  username: root
+  username: lazybone
   password:
 
 development:
   <<: *default
-  database: lazy_emoji
+  database: lazyemoji
 

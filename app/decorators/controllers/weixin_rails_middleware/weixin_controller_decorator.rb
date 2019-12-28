@@ -5,13 +5,16 @@
 WeixinRailsMiddleware::WeixinController.class_eval do
 
   def reply
-    render xml: send("response_#{@weixin_message.MsgType}_message", {})
+    # render xml: send("response_#{@weixin_message.MsgType}_message", {})
+    render xml: send("response_text_message", {})
   end
 
   private
 
     def response_text_message(options={})
-      reply_text_message("Your Message: #{@keyword}")
+      url = "http://local.boneyiyi.club/a/" if Rails.env.development?
+      url = "http://emoji.boneyiyi.club/" if Rails.env.production?
+      reply_text_message("点击制作：\n \n #{url} \n \n （因为微信不再审核个人，所以这么蹩脚）")
     end
 
     # <Location_X>23.134521</Location_X>
