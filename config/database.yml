@@ -8,5 +8,5 @@ default: &default
 
 development:
   <<: *default
-  database: lazy-emoji
+  database: lazy_emoji
 
