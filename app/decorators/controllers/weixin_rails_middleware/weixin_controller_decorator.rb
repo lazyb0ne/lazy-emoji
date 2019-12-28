@@ -13,7 +13,7 @@ WeixinRailsMiddleware::WeixinController.class_eval do
 
     def response_text_message(options={})
       url = "http://local.boneyiyi.club/a/" if Rails.env.development?
-      url = "http://emoji.boneyiyi.club/" if Rails.env.production?
+      url = "http://emoji_html.boneyiyi.club/" if Rails.env.production?
       reply_text_message("点击制作：\n \n #{url} \n \n （因为微信不再审核个人，所以这么蹩脚）")
     end
 
